@@ -17,21 +17,21 @@ console.log(whatIsThisThen);
  *
  */
 
-// var favoriteCheese = prompt("What is your favorite cheese?");
-//
-// console.log(favoriteCheese + " happens to be their favorite cheese. Huzzah!");
+var favoriteCheese = prompt("What is your favorite cheese?");
 
-// var typeOfPrompt = typeof prompt("Tell me something");
-//
-// console.log(typeOfPrompt);
+console.log(favoriteCheese + " happens to be their favorite cheese. Huzzah!");
 
-//var num = parseFloat(prompt("Gimme a number..."));
+var typeOfPrompt = typeof prompt("Tell me something");
 
-//console.log("User entered: " + num + ". That number plus 17 is: " + (num + 17) + ".")
+console.log(typeOfPrompt);
 
-// var canIGoToToysRUs = confirm("Can I go to Toys 'R Us, pwease?");
-//
-// console.log(canIGoToToysRUs);
+var num = parseFloat(prompt("Gimme a number..."));
+
+console.log("User entered: " + num + ". That number plus 17 is: " + (num + 17) + ".")
+
+var canIGoToToysRUs = confirm("Can I go to Toys 'R Us, pwease?");
+
+console.log(canIGoToToysRUs);
 
 var valueOfThis = alert("You're looking at a website!");
 

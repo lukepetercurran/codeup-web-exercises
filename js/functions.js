@@ -116,4 +116,4 @@ function calculateTip(tipPercentage, billTotal) {
     var originalPrice = (100);
     var discountPercent = (.2);
     applyDiscount(originalPrice, discountPercent)
-console.log(applyDiscount(originalPrice), (discountPercent));
+    console.log(applyDiscount(originalPrice), (discountPercent));

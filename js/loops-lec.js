@@ -1,3 +1,5 @@
+"use strict";
+
 // While loops
 
 // The pizza loop
@@ -86,3 +88,23 @@
 // } while (guess !== number);
 //
 // alert("Your guess of " + guess + " matches the number " + number + "!");
+
+
+// For Loops
+
+var count = 0;
+while (count <= 100){
+    console.log(count);
+    count = count + 1;
+}
+
+for (count = 0; count <= 100; count = count + 1){
+    console.log(count);
+}
+
+for (var i = 0; i <= 100; i++){
+    console.log(i);
+}
+// These 3 loops do the same thing. Start at 0, and count to 100.
+// i stands for "iteration"
+// slap a var in front of i to make it work in strict.

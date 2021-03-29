@@ -50,15 +50,49 @@
 // }
 
 // Exercise 4
-for(var i = 1; i < 10; i++) {
-    var counter = "";
-    for(var j = 0; j < i; j++) {
-        counter += i;
-    }
-    console.log(counter);
-}
+// for(var i = 1; i < 10; i++) {
+//     var counter = "";
+//     for(var j = 0; j < i; j++) {
+//         counter += i;
+//     }
+//     console.log(counter);
+// }
+//
+// // David Wagnon's Method for Exercise 4
+//
+// for(var i = 1; i<10;i++){
+//     for(var x = 0; x<i;x++){
+//         console.log(i);
+//     }
+//     x=0;
+// }
+//
+// // Javier's Method for Exercise 4
+//
+// for (var i = 1; i < 10; i++) {
+//     var number = i;
+// // console.log(stringNumber);
+//     var count = 0;
+//     var outputString = "";
+//     while(count < number) {
+//         outputString = outputString + number.toString();
+//         // console.log("Time " + count + " through the loop " + stringNumber);
+//         count = count + 1;
+//     }
+//     console.log(outputString);
+// }
 
+// Alternative Exercise 4
+// Keeps crashing :( , establish breakout
+
+// for(var i = 1; 1 <= 10; i++) {
+//     console.log(String(i).repeat(i))
+// }
 
 // console.log("1")
 // console.log("2" + "2")
 // console.log("3" + "3" + "3")
+
+for (var i = 100; i > 0; i = i - 5) {
+    console.log(i);
+}

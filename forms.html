@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Veridian Dynamics Registration</title>
+</head>
+<body>
+	<form method="POST" action="https://request-inspector.glitch.me/">
+		<header>
+			<h1>Register with us.</h1>
+		</header>
+		<main>
+			<section>
+				<label for="username">Username</label>
+				<input id="username" name="username" type="text" placeholder="Username Here">
+				<br>
+				<label for="password">Password</label>
+				<input id="password" name="password" type="password" placeholder="Password Here">
+				<br>
+				<p>
+			</section>
+			<section>
+				<label for="body-text">Tell me about  yourself...</label>
+				<br>
+				<textarea id="body-text" name="bio" cols="30" rows="5" placeholder="Please give a short description of yourself."></textarea>
+				<br>
+			</section>
+			<section>
+				<h2>How did you hear about Veridian Dynamics?</h2>
+				<input id="ad-bb" name="advertising1"  type="radio">
+				<label for="ad-bb">Billboard</label>
+				<br>
+				<input id="ad-ra" name="advertising2"  type="radio">
+				<label for="ad-ra">Radio Advertisement</label>
+				<br>
+				<input id="ad-in" name="advertising3"  type="radio">
+				<label for="ad-in">Internet Advertisement</label>
+				<br>
+				<input id="ad-ot" name="advertising4"  type="radio">
+				<label for="ad-ot">Other</label>
+				<br>
+			</section>
+			<section>
+				<h2>
+				<label for="browser-choice">Which web browser do you use most often?</label>
+				</h2>
+				<select id="browser-choice" name="browser-choice">
+					<option value="edge">Edge</option>
+					<option value="chrome">Chrome</option>
+					<option value="firefox">Firefox</option>
+					<option value="other">Other</option>
+				</select>
+			</section>
+		</main>
+		<footer>
+			<p>
+			<button type="submit">Submit</button>
+			</p>
+		</footer>
+	</form>
+</body>
+</html>

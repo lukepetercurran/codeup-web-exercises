@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms Lecture</title>
+</head>
+<body>
+	<h1>Forms Lecture</h1>
+	<h2>Exploring the ever present forms in HTML</h2>
+	<hr>
+
+	<form method="POST" action="https://request-inspector.glitch.me/">
+
+		<label for="username">Username</label>
+		<input id="username" name="username" type="text" placeholder="Username Here">
+		<br>
+
+		<label for="password">Password</label>
+		<input id="password" name="password" type="password" placeholder="Password Here">
+		<br>
+
+		<label for="body-text">Tell me about  yourself...</label>
+		<br>
+		<textarea id="body-text" name="body" cols="30" rows="10">Tell me about your day!</textarea>
+		<br>
+
+		<h3>What is the correct answer?</h3>
+		<input name="multi-choice1" id="choice-a" value="1" type="radio">
+		<label for="choice-a">A</label>
+		<br>
+		<input name="multi-choice2" id="choice-b" value="2" type="radio">
+		<label for="choice-a">B</label>
+		<br>
+		<input name="multi-choice3" id="choice-c" value="3" type="radio">
+		<label for="choice-a">C</label>
+		<br>
+		<input name="multi-choice4" id="choice-d" value="4" type="radio">
+		<label for="choice-a">D</label>
+		<br>
+
+		<h3>How'd you hear about us?</h3>
+
+		<label for="ad-bb">Billboard</label>
+		<input id="ad-bb" name="advertising"  type="checkbox">
+		<label for="ad-yt">Youtube</label>
+		<input id="ad-yt" name="advertising"  type="checkbox">
+		<label for="ad-np">Newspaper</label>
+		<input id="ad-np" name="advertising"  type="checkbox">
+		<br>
+
+		<input name="newsletter" type="checkbox" checked><span>Would you like to sign up for our newsletter?</span>
+		<br>
+
+		<h3>
+			<label for="coffee_preference">What kind of coffee roast do you like?</label>
+		</h3>
+		<select id="coffee_preference" name="coffee_preference">
+			<option value="light">Light Roast</option>
+			<option value="medium">Medium Roast</option>
+			<option value="dark">Dark Roast</option>
+			<option value="espresso">Espresso Blend</option>
+		</select>
+		<br>
+
+		<input name="user-Id" value="c-wd-sa-620774" type="hidden">
+		<br>
+
+		<label for="nonactive">Ignore this</label>
+		<input disabled id="nonactive" name="userId" type="text"  value="c-wd-sa-620774">
+		<br>
+
+		<button type="submit">Explore the fun fun world of forms!</button>
+	</form>
+</body>
+</html>

@@ -1,4 +1,4 @@
-var character = {
+var character1 = {
     class: "fighter",
     name: "Arata",
     race: "Human",
@@ -58,7 +58,7 @@ var monster = {
         if (attackRoll >= enemy.armorClass) {
             var damage = Math.floor(Math.random() * damageRange) + this.strengthBonus + this.minDamage;
             enemy.hitPoints = enemy.hitPoints - damage;
-            console.log(this.type + " hit the " + character.name + " with their " + this.weapon + " for " + damage + " points. " + character.name + " has " + character.hitPoints + " hit points left");
+            console.log(this.type + " hit " + character1.name + " with their " + this.weapon + " for " + damage + " points. " + character1.name + " has " + character1.hitPoints + " hit points left");
         } else {
             console.log(this.type + " missed!");
         }
@@ -74,10 +74,24 @@ var weakMonster = {
     weapon: "Dagger",
     attackBonus: 1,
     minDamage: 1,
-    maxDamage: 3
+    maxDamage: 3,
+    attack: function(enemy) {
+        var damageRange = this.maxDamage - this.minDamage;
+        var attackRoll = Math.floor(Math.random() * 20) + this.strengthBonus;
+        if (attackRoll >= enemy.armorClass) {
+            var damage = Math.floor(Math.random() * damageRange) + this.strengthBonus + this.minDamage;
+            enemy.hitPoints = enemy.hitPoints - damage;
+            console.log(this.type + " hit " + character1.name + " with their " + this.weapon + " for " + damage + " points. " + character1.name + " has " + character1.hitPoints + " hit points left");
+        } else {
+            console.log(this.type + " missed!");
+        }
+    }
 }
 do {
-    character.attack(monster);
-    monster.attack(character)
-} while (character.hitPoints > 0 && monster.hitPoints > 0)
+    weakMonster.attack(character1)
+    character1.attack(monster);
+    monster.attack(character1);
+    character1.attack(weakMonster);
+} while (character1.hitPoints > 0 && (monster.hitPoints > 0 && weakMonster.hitPoints > 0))
+
 

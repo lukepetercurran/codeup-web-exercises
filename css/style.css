@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap);
+
+h1 {
+    font-size: 300%;
+    text-align: center;
+}
+
+h2.fancy-header {
+    font-size: 3em;
+}
+h1,h2 {
+    color: dodgerblue;
+    text-decoration: underline;
+    text-indent: 50px;
+}
+
+body {
+    font-family: 'RocknRoll One', sans-serif;
+    color: aliceblue;
+    background-color: darkblue;
+    background-image: url('../Img/Veridian Dynamics "logo".png');
+    background-repeat: no-repeat;
+    background-position: 90% 05%;
+}
+
+ol {
+    list-style: georgian;
+}
+
+ul {
+    list-style: lower-greek;
+}
+
+table, td, tr {
+    padding: 30px;
+}
+
+td {
+    font-size: large;
+}
+
+tr {
+    font-size: xx-large;
+}
+
+a:link {
+    color: cyan;
+}
+
+a:visited {
+    color: rebeccapurple;
+}
+
+a:hover {
+    color: teal;
+}
+
+a:active {
+    color: peachpuff;
+}

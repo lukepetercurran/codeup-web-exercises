@@ -1,0 +1,82 @@
+:root {
+    font-size: 14px;
+}
+
+@font-face{
+    font-family: "roboto";
+    src: url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
+    font-weight: bold
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif ;
+    background-color: #F1F0F0;
+    background-image: url(../Img/codeup-arrow.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+h1 {
+    color: #0b850b;
+    text-align: center;
+    font-size: 1.9em;
+}
+
+h2, h3 {
+    color: #003b00;
+}
+
+aside, em {
+    font-family: serif;
+}
+
+h1, .bottom-border {
+    border-bottom: 1px solid black;
+}
+
+li {
+    list-style: square;
+}
+
+ol {
+    list-style: thai;
+/*    upper-latin*/
+}
+
+q {
+    font-weight: bold;
+}
+
+#main-branding {
+    font-size: 110%
+}
+
+/*descendant selector*/
+
+/*section > p {*/
+/*    color: hotpink;*/
+/*}*/
+
+a:link {
+    color: green;
+}
+
+a:visited {
+    color: rebeccapurple;
+}
+
+a:hover {
+    color: darkturquoise;
+}
+
+a:active {
+    color: hotpink;
+}
+
+/*.bottom-border:first-of-type {*/
+/*    border-width: 2px;*/
+/*}*/
+
+p:first-of-type::first-letter {
+    font-size: 1.1em;
+}

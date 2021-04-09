@@ -11,10 +11,10 @@ var character1 = {
     hitPoints: 13,
     armor: "Chain Mail",
     shield: true,
-    armorClass: 20,
-    weapon: "Greatsword",
-    minDamage: 2,
-    maxDamage: 12,
+    armorClass: 18,
+    weapon: "Longsword",
+    minDamage: 1,
+    maxDamage: 8,
     attack: function(enemy) {
         var damageRange = this.maxDamage - this.minDamage;
         var attackRoll = Math.floor(Math.random() * 20) + this.proficiencyBonus + this.strengthBonus;
@@ -87,6 +87,14 @@ var weakMonster = {
         }
     }
 }
+
+var character2= {
+
+}
+
+
+
+
 do {
     weakMonster.attack(character1)
     character1.attack(monster);

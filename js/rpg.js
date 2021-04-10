@@ -89,17 +89,44 @@ var weakMonster = {
 }
 
 var character2= {
-
+    class: "barbarian",
+    name: "galgazor",
+    race: "half-orc",
+    level: 18,
+    proficiencyBonus: 5,
+    strength: 20,
+    strengthBonus: 5,
+    dexterity: 18,
+    constitution: 18,
+    hitPoints: 240,
+    armor: 20,
+    shield: 0,
+    armorClass: 20,
+    weapon: "greataxe",
+    minDamage: 1,
+    maxDamage: 12,
+    attack: function(enemy) {
+        var damageRange = this.maxDamage - this.minDamage;
+        var attackRoll = Math.floor(Math.random() * 20) + this.strengthBonus;
+        if (attackRoll >= enemy.armorClass) {
+            var damage = Math.floor(Math.random() * damageRange) + this.strengthBonus + this.minDamage;
+            enemy.hitPoints = enemy.hitPoints - damage;
+            console.log(this.name + " hit " + enemy.type + " with their " + this.weapon + " for " + damage + " points. " + enemy.type + " has " + enemy.hitPoints + " hit points left");
+        } else {
+            console.log(this.name + " missed!");
+        }
+    }
 }
 
 
 
 
+
 do {
-    weakMonster.attack(character1)
-    character1.attack(monster);
-    monster.attack(character1);
-    character1.attack(weakMonster);
-} while (character1.hitPoints > 0 && (monster.hitPoints > 0 && weakMonster.hitPoints > 0))
+    // weakMonster.attack(character2)
+    monster.attack(character2);
+    character2.attack(monster);
+    // character2.attack(weakMonster);
+} while (character2.hitPoints > 0 && monster.hitPoints > 0)
 
 

@@ -5,4 +5,26 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+.message {
+    background-color: #cddeff;
+    color: #6251b2;
+    border: 1px solid hotpink;
+    margin: 4px;
+}
 
+.message-info {
+    background-color: hotpink;
+    border: black 1px solid;
+}
+
+.message-success {
+
+}
+
+.message-warning {
+
+}
+
+.message-error {
+
+}

@@ -1,6 +1,8 @@
 :root {
     --bg-success: #cff3da;
-    --text-success: #237a47
+    --text-success: #237a47;
+    --bg-error: #
+    --text-error: #
 }
 body, html {
     height: 100%;
@@ -29,8 +31,10 @@ body, html {
 
 .message-warning {
     background: #
+    color: #
 }
 
 .message-error {
-
+    background: var(--bg-error);
+    color: var(--text-error);
 }

@@ -17,20 +17,31 @@ body {
     background-position: top right;
 }
 
+div#tableContainer {
+    display: table;
+}
+
+div#tableRow {
+    display: table-row;
+}
+
 main {
-    margin: 0 10px 10px 330px;
+    margin: 0 330px 10px 10px;
+    display: table-cell;
 }
 
 #sidebar {
     width: 300px;
-    float: left;
+    display: table-cell;
+    /*position: absolute;*/
+    /*top: 130px;*/
+    /*right: 10px;*/
     background-color: white;
     margin: 0 10px 10px 10px;
 }
 
 footer {
     background-color: white;
-    clear: left;
 }
 
 h1 {
@@ -43,8 +54,14 @@ h2, h3 {
     color: #003b00;
 }
 
+h3 {
+    text-align: center;
+    position: relative;
+    right: 5px;
+}
+
 aside, em {
-    font-family: serif;
+    font-family: Montserrat, serif;
 }
 
 h1, .bottom-border {
@@ -62,6 +79,11 @@ ol {
 
 q {
     font-weight: bold;
+}
+
+blockquote {
+    position: relative;
+    left: 8px;
 }
 
 #main-branding {
@@ -90,6 +112,11 @@ a:active {
     color: hotpink;
 }
 
+/*img[src="logo"] {*/
+/*    position:fixed;*/
+/*    bottom:10px;*/
+/*    right:0;*/
+/*}*/
 /*.bottom-border:first-of-type {*/
 /*    border-width: 2px;*/
 /*}*/

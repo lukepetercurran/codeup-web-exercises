@@ -9,11 +9,28 @@
 }
 
 body {
+    margin-top: 85px;
     font-family: Helvetica, Arial, sans-serif ;
     background-color: #F1F0F0;
     background-image: url(../Img/codeup-arrow.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-position: top right;
+}
+
+main {
+    margin: 0 10px 10px 330px;
+}
+
+#sidebar {
+    width: 300px;
+    float: left;
+    background-color: white;
+    margin: 0 10px 10px 10px;
+}
+
+footer {
+    background-color: white;
+    clear: left;
 }
 
 h1 {

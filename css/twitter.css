@@ -76,6 +76,15 @@ a {
     float: left;
 }
 
+.profile-items {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-entry {
+    margin: .5em;
+}
+
 .timeline {
     width: calc(50% - 1em);
     margin: 0.5em;
@@ -92,8 +101,20 @@ a {
     width:100%;
     background: var(--light-bg);
     padding: .5em;
-    overflow:auto;
     border-bottom: var(--separator-color) 1px solid;
+
+    /*overflow solution to clearing floats*/
+    overflow: auto;
+
+    /*clearfix hack*/
+
+    /*content: "";*/
+    /*display: table;*/
+    /*clear: both;*/
+
+    /*flow parent element around floated children*/
+
+    /*display: flow-root;*/
 }
 
 .media-image {
@@ -135,11 +156,4 @@ a {
     color: var(--main-link-color);
 }
 
-.media {
-    width: 100%;
-    background-color: var(--light-bg);
-    border-bottom: 1px solid var(--separator-color);
-    padding: .5em;
-    overflow: auto;
-}
 

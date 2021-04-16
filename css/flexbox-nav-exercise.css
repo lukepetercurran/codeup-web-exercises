@@ -10,18 +10,47 @@ nav {
     background: #333333
 }
 
+.links {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    padding: .5em;
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+.logo {
+    font-size: 3em;
+    padding: .2em 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    width: 15px;
+    padding-top: .3em;
+}
+
+.icons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-family: Verdana, serif;
-}
-
-nav a:hover {
-    background: black;
-}

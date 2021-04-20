@@ -1,0 +1,15 @@
+* {
+    font-family: 'Verdana', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, sans-serif;
+}
+
+main h2 {
+    color: steelblue;
+}
+
+header {
+    border-bottom: forestgreen solid 3px;
+}

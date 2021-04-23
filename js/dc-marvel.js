@@ -43,8 +43,8 @@ colorInput.value = "";
 
 //Hulk
 
-// var theHulk =document.getElementById("theHulk")
-// var hulkState =theHulk.getAttribute("data-state");
+// var theHulk = document.getElementById("theHulk")
+// var hulkState = theHulk.getAttribute("data-state");
 // var hulkStrength = theHulk.getAttribute("data-strength");
 // var hulkIntelligence =theHulk.getAttribute("data-intelligence");
 // alert("The Hulk is currently in " + hulkState + " state. His strength is " + hulkStrength + " and his intelligence is " + hulkIntelligence);
@@ -75,12 +75,13 @@ transformButton.onclick = function(){
     //     hulkNameElement.innerHTML = "Bruce Banner"
     // }
     var hulkNameElement = document.getElementById("theHulk");
+    var output = hulkState + " is currently in " + hulkState + " state, His strength is " + hulkStrength + " and his intelligence is " + hulkIntelligence;
     if (hulkStrength === "super"){
         hulkNameElement.style.color = "green";
+        hulkNameElement.innerHTML = output
     } else {
         hulkNameElement.style.color = "hotpink";
-        hulkNameElement.innerHTML = "Bruce Banner  is currently in " + hulkState + " state. His strength is " + hulkStrength + " and his intelligence is " + hulkIntelligence;
+        hulkNameElement.innerHTML = output
     }
-    // var output = hulkState + " is currently in " + hulkState + " state. His strength is " + hulkStrength + " and his intelligence is " + hulkIntelligence;
 }
 

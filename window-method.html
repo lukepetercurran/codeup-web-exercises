@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Browser Object Model</title>
+</head>
+<body>
+<script>
+  // the below console command will return hey 1000 times and count it.
+  window.setInterval(hey, 1000);
+  function hey(){
+    console.log('hey ' + count);
+    count = count + 1;
+  }
+
+//returns hey 1000 times, but the browser will still stop outputting to the console at 10. Still counting behind the scenes doe so clearInterval to make the function stahp entirely.
+  var count = 1;
+  var thisWillStop = setInterval(function(){
+    if (count < 10) {
+      console.log('hey ' + count);
+      count = count + 1;
+    } else{
+      clearInterval(thisWillStop);
+    }
+  }, 1000);
+
+thisWillStop = setInterval(hey, 1000);
+
+setTimeout(wakeUpUser, 5000);
+function wakeUpUser(){
+    alert("You've been staring at this page for five seconds");
+}
+
+
+</script>
+</body>
+</html>

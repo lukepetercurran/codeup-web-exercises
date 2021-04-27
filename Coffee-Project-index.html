@@ -10,116 +10,54 @@
 
 
 <!--New Forms-->
-<!--1st form-->
 
+<!--Search Form-->
 
     <div class="row justify-content-center mx-auto">
-        <h1 class="text-center col-12">Coffee!</h1>
+        <h1 class="text-center col-12">Fancy Coffee!</h1>
         <hr>
-    <form  class="col-8 mx-auto p-4">
-        <label for="roast-selection"></label>
-<!--        ?-->
+
+        <form  class="col-8 mx-auto p-4">
+            <label for="name-selection">Search for your Favorite Roast here!</label>
+            <label for="roast-selection"></label>
         <select id="roast-selection">
             <option value="all">all</option>
-                <option value="light">light</option>
-                <option value="medium">medium</option>
-                <option value="dark">dark</option>
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
         </select>
-
-
-        <label for="name-selection">Coffee Name</label>
+        <br>
         <input type="text" class="Roast" id="name-selection">
-
         <button id="submit" type="submit" class="btn btn-primary">Submit</button>
     </form>
-
-        <div id="coffees"></div>
-
-        <!--2nd form-->
-
-
-        <!--    <form class="col-8 mx-auto p-4">-->
-<!--        <h1 class="d-flex text-center col-12 justify-content-end">Add a Coffee</h1>-->
-<!--            <label for="roast-add-coffee"></label>-->
-<!--            <select id="roast-add-coffee">-->
-<!--                <option>light</option>-->
-<!--                <option>medium</option>-->
-<!--                <option>dark</option>-->
-<!--            </select>-->
-
-
-<!--            <label for="roast-add-name">Add Coffee Name</label>-->
-<!--            <input type="text" class="Roast" id="roast-add-name">-->
-
-<!--        <button id="roast-add" type="submit"  class="btn btn-primary display-inline-block">Submit</button>-->
-<!--    </form>-->
-
     </div>
+
+<!--Add a Coffee Form-->
+<!--WIP-->
+
+<div class="row justify-content-center mx-auto">
+    <h2 class="text-center col-12">Don't see your favorite?</h2>
+    <form class="col-8 mx-auto p-4">
+        <label for="roast-add-name">Add a Roast here!</label>
+        <label for="roast-add-coffee"></label>
+            <select id="roast-add-coffee">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+        <br>
+        <input type="text" class="Roast" id="roast-add-name">
+        <button id="roast-add" type="submit"  class="btn btn-primary display-inline-block">Submit</button>
+    </form>
+</div>
 
 
 <!--Roast Divs-->
 
-<!--    <div>-->
-<!--        <h2>Light City</h2>-->
-<!--        <p>light</p>-->
-<!--    </div>-->
-
-<!--    <div>-->
-<!--        <h2>Half City</h2>-->
-<!--        <p>light</p>-->
-<!--    </div>-->
-
-<!--    <div>-->
-<!--        <h2>Cinnamon</h2>-->
-<!--        <p>light</p>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <h2>City</h2>-->
-<!--        <p>Medium</p>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <h2>American</h2>-->
-<!--        <p>Medium</p>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <h2>Breakfast</h2>-->
-<!--        <p>Medium</p>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <h2>High</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <h2>Continental</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <h2>New Orleans</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <h2>European</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <h2>Espresso</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <h2>Viennese</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <h2>Italian</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--        <h2>French</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-
+<div class="row col-6" id="coffees"></div>
 
 <!--OG JS-->
+
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>

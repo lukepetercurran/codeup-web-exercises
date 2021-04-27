@@ -52,7 +52,7 @@ document.querySelector("#color-btn").addEventListener("click", function(){
 
 document.querySelector("#travel-items").addEventListener("change", function(event){
     console.log(event.target);
-    document.querySelector(".result").innerHTML = 'I agree that  ${event.target.value} is important!';
+    document.querySelector(".result").innerHTML = 'I agree that  ${event.target.value}  is important!';
 });
 
 // Key Event

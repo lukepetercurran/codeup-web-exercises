@@ -5,7 +5,7 @@
 // alert(showMe)
 
 var like = document.getElementById("like");
-var dontLike =document.getElementById("dontLike");
+var dontLike = document.getElementById("dontLike");
 var dc =document.getElementById("dc");
 dc.innerHTML = dc.innerHTML + " Animated Universe";
 var output = like.innerHTML + ' ' + dc.innerHTML;
@@ -80,7 +80,7 @@ transformButton.onclick = function(){
         hulkNameElement.style.color = "green";
         hulkNameElement.innerHTML = output
     } else {
-        hulkNameElement.style.color = "hotpink";
+        hulkNameElement.style.color = "pink";
         hulkNameElement.innerHTML = output
     }
 }

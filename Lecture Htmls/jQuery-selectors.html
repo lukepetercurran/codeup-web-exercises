@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Selectors</title>
+	<script src="../js/jquery-3.6.0.min.js"></script>
+	<script>
+        // function init(){
+        //   $("#changes").css("color", "hotpink");
+        // }
+        // window.onload = init;
+        // $("#changes").css("color", "hotpink");
+        // $(document).ready(function(){
+        //   $("#hotPink").click(function(){
+        //     $("#changes").css("color", "hotpink");
+        //   });
+        // });
+	</script>
+</head>
+<body>
+<h1>jQuery Selectors</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus eaque est labore libero maiores quaerat sequi vel voluptatibus. Accusamus et omnis quod recusandae sed voluptatibus? Inventore neque nesciunt omnis quod?</p>
+<h2 id="id-selectors">ID Selectors</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda debitis deleniti, dicta eaque earum error fuga id illo molestias vitae. Accusantium culpa esse, eum inventore iure voluptates! Cumque, dicta, rem.</p>
+<h2 class ="class selectors">Class Selectors</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi asperiores corporis cum earum esse eum in labore laboriosam magni modi mollitia natus nisi nulla perspiciatis quia, quidem quod sunt.</p>
+<h2> Generic element</h2>
+<p>ipsum dolor sit amet, consectetur adipisicing elit. Beatae cumque error eum fugiat in nostrum omnis perspiciatis placeat provident unde? Assumenda at autem cum distinctio eum nihil quia sint vero?</p>
+<button id="hotPink">Hot Pink</button>
+<p id="changes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, aliquid asperiores beatae cupiditate, doloremque earum error eum eveniet incidunt, magnam maxime minima neque nostrum officia sapiente sequi similique tempora ut.</p>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script>
+    // we can use jQuery to call the jQuery function
+    // we can use html to access the content of an element
+    // we can select an element by its id
+    jQuery("#id-selectors").html("I am the chosen one");
+    // we can also use the $ shortcut to call the jQuery function
+    // we can alter the css that is applied to an element
+    $(".class-selectors").css("font-family", "sans-serif");
+    // we can access all elements of a particular type using the tag selector
+    // $("p").html("you've been pwned");
+    // you can pass a variable to the html method
+    // var pwn = "you've been pwned";
+    // $("p").html(pwn);
+    // you can pass a function to the html method - as long as it returns a string
+    // function pwned(num){
+    //   var pwn = "you've been pwned";
+    //   for (var i = 0; i < num; i++){
+    //     pwn = pwn + " you've been pwned";
+    //   }
+    //   return pwn;
+    // }
+    //
+    // $("p").html(pwned(15));
+
+    // you can select lists of elements
+    $("h1, h2, p").html("I've taken back my computer");
+
+    // you can use the universal selector
+    $("*").css("font-style", "italic");
+
+    // you can use more advanced css selectors
+    $("h1 + p").html("Nope. You're still pwned");
+</script>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script>$("#changes").css("color", "hotpink");</script>
+</body>
+</html>

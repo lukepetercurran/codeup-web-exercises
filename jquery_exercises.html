@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Exercises</title>
+</head>
+<body>
+<h1 id="h1-id">Hello fellow Students</h1>
+<div id="wrapItUp">
+<p id="introToTheList">This list will be great!</p>
+<ul id="theList">
+	<li class="doggysFavoriteFood">Steakums</li>
+	<li class="doggysFavoriteFood">Liver</li>
+	<li class="doggysFavoriteFood">Kibble</li>
+	<li class="doggysMostFavoriteFood">Cheese</li>
+</ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script> $(document).delay(2000).ready(function(){
+    // alert("your page has finished loading");
+	//to get the text only
+	// var theDiv = $("#wrapItUp").text();
+	// to get everything between the tags
+    // var theDiv = $("#wrapItUp").html();
+    // alert(theDiv);
+	// var theListIntro = $("#introToTheList").html();
+    // alert(theListIntro);
+    $(".doggysFavoriteFood").css("border", "solid red 1px");
+    $("li").css("font-size", "20px");
+    $("h1, p, li").css("background-color", "palegoldenrod");
+    var theHeadersContent = $("h1").html();
+//    alert(theHeadersContent);
+	var theListItems = $("li").each(function() {
+        // this works
+	    alert($(this).html());
+        //this does not
+		// alert($("li").html());
+    });
+
+	alert(theListItems)
+});
+</script>
+</body>
+</html>

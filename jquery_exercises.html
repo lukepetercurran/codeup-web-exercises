@@ -17,7 +17,8 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script> $(document).delay(2000).ready(function(){
+<script> $(document).ready(function(){
+    //Older Code
     // alert("your page has finished loading");
 	//to get the text only
 	// var theDiv = $("#wrapItUp").text();
@@ -26,20 +27,37 @@
     // alert(theDiv);
 	// var theListIntro = $("#introToTheList").html();
     // alert(theListIntro);
-    $(".doggysFavoriteFood").css("border", "solid red 1px");
-    $("li").css("font-size", "20px");
-    $("h1, p, li").css("background-color", "palegoldenrod");
-    var theHeadersContent = $("h1").html();
-//    alert(theHeadersContent);
-	var theListItems = $("li").each(function() {
-        // this works
-	    alert($(this).html());
-        //this does not
-		// alert($("li").html());
-    });
-
-	alert(theListItems)
-});
+//     $(".doggysFavoriteFood").css("border", "solid red 1px");
+//     $("li").css("font-size", "20px");
+//     $("h1, p, li").css("background-color", "palegoldenrod");
+//     var theHeadersContent = $("h1").html();
+// //    alert(theHeadersContent);
+// 	var theListItems = $("li").each(function() {
+//         // this works
+// 	    alert($(this).html());
+//         //this does not
+// 		// alert($("li").html());
+//     });
+//
+// 	alert(theListItems)
+//	Mouse Click events
+	$("#h1-id").click(function(){
+	    // alert("Handler for .h1() called."); //Testing my code
+	    $("h1").css("background-color", "blue");
+	});
+	$("#introToTheList").dblclick(function(){
+	    // alert("Handler for .p() called.");
+		$("p").css("font-size", "18px");
+	});
+	$("#doggysFavoriteFood").hover(function(){
+	    // alert("Handler for .li() called.");
+	    $(this).css("background-color", "red");
+	},
+		function() {
+            $(this).css("background-color", "black");
+        }
+	)}
+)
 </script>
 </body>
 </html>

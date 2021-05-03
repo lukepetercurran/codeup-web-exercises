@@ -40,24 +40,36 @@
 //     });
 //
 // 	alert(theListItems)
-//	Mouse Click events
-	$("#h1-id").click(function(){
+
+//	Mouse Click Events
+
+	$("h1").click(function(){
 	    // alert("Handler for .h1() called."); //Testing my code
-	    $("h1").css("background-color", "blue");
+	    $(this).css("background-color", "blue");
 	});
-	$("#introToTheList").dblclick(function(){
+	$("p").dblclick(function(){
 	    // alert("Handler for .p() called.");
-		$("p").css("font-size", "18px");
+		$(this).css("font-size", "18px");
 	});
-	$("#doggysFavoriteFood").hover(function(){
+	$("li").hover(function(){
 	    // alert("Handler for .li() called.");
-	    $(this).css("background-color", "red");
+	    $(this).css("color", "red");
 	},
 		function() {
-            $(this).css("background-color", "black");
+            $(this).css("color", "black");
         }
 	)}
 )
+
+// Keyboard Events
+//Chronological order: keydown, keypress, keyup
+
+//keydown recognizes all keyboard keys when they are pushed down, repeats as the key is held down
+
+//keypress recognizes the character that is typed, only recognizes keys that can by typed.
+
+//keyup recognizes all keyboard keys when they are released, does not repeat because you can't hold a key up.
+
 </script>
 </body>
 </html>

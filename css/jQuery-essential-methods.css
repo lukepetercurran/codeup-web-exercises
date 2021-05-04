@@ -1,0 +1,24 @@
+@font-face{
+    font-family: Montserrat;
+}
+.wildIt {
+    font-family: Montserrat;
+    font-size: 500%;
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: darkgoldenrod;
+    text-align: center;
+}
+.highlight{
+    background-color: cornsilk;
+}
+.hotPinkIt {
+    color: hotpink;
+}
+::selection {
+    color: white;
+    background-color: rebeccapurple;
+}

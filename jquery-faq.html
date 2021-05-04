@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery FAQ</title>
+<style>
+  .invisible {
+  visibility: hidden;
+ }
+  .highlight {
+    background-color: hotpink;
+  }
+</style>
+</head>
+<body>
+<p>National Parks of America</p>
+<dl>
+  <dt>Acadia</dt><dd class="invisible">Maine</dd>
+  <dt>Badlands</dt><dd class="invisible">South Dakota</dd>
+  <dt>Canyonlands</dt><dd class="invisible">Utah</dd>
+  <dt>Death Valley</dt><dd class="invisible">California and Nevada</dd>
+  <dt>Everglades</dt><dd class="invisible">Florida</dd>
+  <dt>Gates of the Arctic</dt><dd class="invisible">Alaska</dd>
+  <dt>Haleakala</dt><dd class="invisible">Hawaii</dd>
+  <dt>Indiana Dunes</dt><dd class="invisible">Indiana</dd>
+  <dt>Joshua Tree</dt><dd class="invisible">California</dd>
+  <dt>Katmai</dt><dd class="invisible">Alaska</dd>
+</dl>
+<p><a href="#">View/Hide States</a></p>
+  <script src="js/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $("dd").addClass("invisible");
+    $("a").click(function(){
+      $("dd").toggleClass("invisible");
+    });
+
+    $("dt").click(function(){
+      $(this).toggleClass("highlight");
+    });
+
+</script>
+</body>
+</html>

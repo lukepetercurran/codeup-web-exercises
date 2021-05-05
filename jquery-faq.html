@@ -8,7 +8,7 @@
   visibility: hidden;
  }
   .highlight {
-    background-color: hotpink;
+    background-color: cornsilk;
   }
 </style>
 </head>
@@ -27,8 +27,32 @@
   <dt>Katmai</dt><dd class="invisible">Alaska</dd>
 </dl>
 <p><a href="#">View/Hide States</a></p>
+<!--First Park-->
+<h3>Arches</h3>
+<ul>
+  <li>Established April 12th, 1929</li>
+  <li>Located near Moab, Utah</li>
+  <li>1,663,557 Visitors in 2018</li>
+  <li>119.8 miles &#178</li>
+</ul>
+<!--Second Park-->
+<h3>Badlands</h3>
+<ul>
+  <li>Established January 29th, 1978</li>
+  <li>Located near Rapid City, South Dakota</li>
+  <li>916,932 Visitors in 2020</li>
+  <li>242,756 Acres</li>
+</ul>
+<!--Third Park-->
+<h3>Carlsbad Caverns</h3>
+<ul>
+  <li>Established May 14th, 1930</li>
+  <li>Located near Carlsbad, New Mexico</li>
+  <li>440,691 Visitors in 2019</li>
+  <li>46,766 Acres</li>
+</ul>
+<button id="lastLiYellow">Click to view the size of each Park</button>
   <script src="js/jquery-3.6.0.min.js"></script>
-
   <script>
     $("dd").addClass("invisible");
     $("a").click(function(){
@@ -38,6 +62,21 @@
     $("dt").click(function(){
       $(this).toggleClass("highlight");
     });
+
+    $("#lastLiYellow").click(function(){
+      $("ul").each(function() {
+        $(this).children().last().css("background-color", "yellow");
+      });
+    });
+
+    $("h3").click(function(){
+      $(this).nextAll().css("font-weight", "bold")
+    });
+
+    $("li").click(function(){
+      $(this).parent().children("li").first().css("color", "blue")
+    });
+
 
 </script>
 </body>

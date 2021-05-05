@@ -3,16 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>jQuery Essential Methods</title>
-	<link rel="stylesheet" href="css/jQuery-essential-methods.css">
+	<link rel="stylesheet" href="../css/jQuery-essential-methods.css">
 </head>
 <body>
-  <h1>Essential jQuery Methods</h1>
+<header>
+	<h1>Essential jQuery Methods</h1>
+</header>
   <h2 id="leader" class="highlight">I am the Leader</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eaque eum itaque nihil quia. Accusantium distinctio dolorum eaque eius impedit, in ipsum iusto nihil nobis, odio perspiciatis sint voluptates voluptatibus.</p>
   <h2 id="follower" class="highlight">I am the follower</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda consequuntur culpa distinctio eaque eos facere fuga, iusto libero magni odit provident quasi qui sunt ullam unde vitae. Alias, eum.</p>
   <button id="font-changer"> Change Font Family</button>
-  <script src='js/jquery-3.6.0.min.js'></script>
+  <script src='../js/jquery-3.6.0.min.js'></script>
 <script>
   var htmlMethod = $("#leader").html();
 
@@ -27,9 +29,9 @@
         var currentFontFamily = $("body").css("font-family");
         alert(currentFontFamily)
         if (currentFontFamily === 'serif' || currentFontFamily === 'Times'){
-            $("body").css("font-family", "sans-serif");
+            $("main").css("font-family", "sans-serif");
         } else {
-            $("body").css("font-family", "serif");
+            $("main").css("font-family", "serif");
         }
 	});
 
@@ -41,19 +43,38 @@
     //     $("h2").removeClass("highlight");
     // });
 
-  $("h2").hover(
-      function(){
-          $("h2").addClass("highlight");
-          $("h2").addClass("hotPinkIt");
-      },
-	  function(){
-	      $("h2").removeClass("highlight");
-          $("h2").removeClass("hotPinkIt");
-      });
+  // $("h2").hover(
+  //     function(){
+  //         $("h2").addClass("highlight");
+  //         $("h2").addClass("hotPinkIt");
+  //     },
+	//   function(){
+	//       $("h2").removeClass("highlight");
+  //         $("h2").removeClass("hotPinkIt");
+  //     });
 
-  $("h1").mouseenter(function(){
-      $(this).toggleClass("wildIt")
+  // $("h1").mouseenter(function(){
+  //     $(this).toggleClass("wildIt")
+  // });
+
+  $("#font-changer").click(function(){
+      // $("main").toggleClass("sanSerif")
+      $("main ul").css('font-family', 'sans-serif');
   });
+
+  $("main ul li").each(function(index){
+      $(this).css("font-style", "italic");
+      if (index % 2 !==0){
+          $(this).css("background-color", "cornsilk")
+      }
+    //
+	//
+	//
+  });
+
+  $("main ul li").first().css("color", "red");
+
+  $("main ul li").last().css("text-decoration", "underline dotted");
 </script>
 </body>
 </html>

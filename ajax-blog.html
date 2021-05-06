@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lukes Blog</title>
+</head>
+<body>
+<div id="posts">
+	<p>Not gonna lie, I don't know what a blog is, and at this point im too scared to ask.</p>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+function buildStuff() {
+    $("#posts").html("");
+	$.ajax("Data/blog.json").done(function(posts) {
+        console.log(posts)
+        for (var j = 0; j < posts.length; j++) {
+            var htmlStr = "<div id='post-" + (j + 1) + "' class='posts'>";
+            htmlStr += "<div>" + posts[j].title + "</div>"
+            htmlStr += "<p>" + posts[j].content + "</p>"
+	        htmlStr += "<p>" + posts[j].categories + "</p>"
+	        htmlStr += "<p>" + posts[j].date + "</p>"
+            htmlStr += "</div>";
+            $("#posts").append(htmlStr);
+        }
+    });
+    }
+    buildStuff();
+</script>
+</body>
+</html>

@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Online Store</title>
+
 </head>
 <body>
 
@@ -18,13 +19,27 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
+<button id="refresh-table">Refresh the Table here</button>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
-(function() {
+(function buildStuff(){
+    $("#insertProducts").html("");
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
+$.ajax("Data/inventory.json").done(function(products){
+    console.log(products);
+    for (var j = 0; j < products.length; j++) {
+        var htmlStr = "<tr id='product-" + (j + 1) + "' class='products'>";
+        htmlStr += "<td>" + products[j].title + "</td>";
+        htmlStr += "<td>" + products[j].quantity + "</td>";
+        htmlStr += "<td>" + products[j].price + "</td>";
+        htmlStr += "<td>" + products[j].categories + "</td>";
+        $("#insertProducts").append(htmlStr);
+    }
+});
+    $("#refresh-table").click(buildStuff);
 
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
@@ -32,6 +47,7 @@
     //       HINT: You will want to target #insertProducts for your new HTML elements
 })();
 </script>
+
 
 </body>
 </html>

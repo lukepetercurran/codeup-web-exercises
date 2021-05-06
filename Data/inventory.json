@@ -3,7 +3,8 @@
         "title": "Hammer",
         "quantity": 25,
         "categories": [
-            "tool"
+            "tool",
+            "hand"
         ],
         "price": 20
     }, {
@@ -24,11 +25,29 @@
         ],
         "price": 200
     }, {
-        "title": "Screwdrivers",
-        "quantity": 25,
+    "title": "Screwdrivers",
+    "quantity": 25,
+    "categories": [
+        "tool",
+        "hand"
+    ],
+    "price": 10
+},
+    {
+        "title": "Nails",
+        "quantity": 200,
         "categories": [
             "tool"
         ],
-        "price": 10
+        "price": 0.10
+    },
+    {
+        "title": "Wrenches",
+        "quantity": 15,
+        "categories": [
+            "tool",
+            "hand"
+        ],
+        "price": 18
     }
 ]

@@ -2,29 +2,34 @@
 <html>
 <head>
   <title>Konami Code</title>
+  <link rel="stylesheet" href="css/Konami-code.css">
 </head>
 <body>
-<h1>Konami Code </h1>
+<div id="bg">
+  <img src="Img/zergarmygif.gif" alt="zerg army">
+</div>
+<div>
+  <h1>The Enemy approaches, warp in reinforcements!</h1>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
   "use strict";
 
-  $(document).keyup(function(event) {
+  $(document).keydown(function(event) {
     console.log(event.keyCode);
   });
     // Variables
   // a = 65, b = 66 left = 37,up = 38, right = 39,down = 40, return = 13
   // code: ↑ ↑ ↓ ↓ ← → ← → b a enter" (the return key)
-    const konamiCode = [91,38,38,40,40,37,39,37,39,66,65,13];
+    const konamiCode = [38,38,40,40,37,39,37,39,66,65,13];
     var pressedKeys = [];
+
     // Event
-    $(document).keyup(function(event){
+    $(document).keydown(function(event){
       pressedKeys.push(event.keyCode);
       if(JSON.stringify(konamiCode) === JSON.stringify(pressedKeys)) {
-                // <audio>
-                //   <source src="Audio/pylons_audio.mp3"> </source>
-                // </audio>
         // Audio
         $("<audio></audio>").attr({
           'src':'Audio/pylons_audio.mp3',
@@ -32,7 +37,7 @@
           'autoplay':'autoplay'
         }).appendTo("body");
         //Background
-        $("body").css("background-image", "url(img/pylon.jpeg)");
+        $("#bg").css("background-image", "url(Img/pylon.jpeg)"); // background image not changing? rip (.attr)
         $("h1").css("display", "none");
         alert("YOU MUST CONSTRUCT ADDITIONAL PYLONS!");
 

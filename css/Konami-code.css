@@ -1,0 +1,32 @@
+/*html{*/
+/*    background-image: url("../Img/zergarmygif.gif");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+#bg {
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    text-align: center;
+    position: fixed;
+}
+
+#bg img{
+    /*position: fixed;*/
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+    text-align: center;
+}
+
+
+h1 {
+    color: blue;
+    text-align: center;
+    /*position: relative;*/
+}

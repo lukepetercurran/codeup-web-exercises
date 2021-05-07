@@ -5,7 +5,13 @@
 	<title>Mapbox API</title>
 <!-- MAPBOX TAGS -->
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+<style>
 
+	.popup-font {
+		font-family: Chalkboard, sans-serif;
+	}
+
+</style>
 </head>
 <body>
 <h1>Welcome to Mapbox!</h1>
@@ -31,29 +37,20 @@
 
   map.addControl(new mapboxgl.NavigationControl())
 
-  var marker = new mapboxgl.Marker({
-	  draggable: true, //can place propertiese here
-	  color: 'red'
-  })
-      .setLngLat([-98.4861, 29.4260])
-	  .setDraggable(true) //or here using a .(property)
-      .addTo(map);
-
-  marker.on('dragend', function(){
-      alert(marker.getLngLat().toString())
-  })
+  c
 
 //  Instantation of Popup object
 
   var popup = new mapboxgl.Popup()
       .setLngLat(marker.getLngLat())
-      .setHTML("<h3>Hello World!</h3>")
+      .setHTML("<h3>The Alamo!</h3>")
 	  .setMaxWidth("100px")
       .addTo(map);
 
   console.log(popup)
 
-  marker.setPopup(popup);
+  // marker.setPopup(popup);  //disable this to leave popup at coordinates, but able to drag pin around
+  popup.addClassName('popup-font')
 
 
 

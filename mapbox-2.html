@@ -6,12 +6,15 @@
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
+<h1></h1>
 <div id='map' style='width: 400px; height: 300px;'></div>
 <script src="js/keys.js"></script>
-
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+
 
 <script>
+<!--	Map   -->
     mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
     var map = new mapboxgl.Map({
         container: 'map', // container ID
@@ -19,17 +22,24 @@
         center: [-74.2179, 43.2994], // starting position [lng, lat]
         zoom: 4.5 // starting zoom
     });
+
+    // Marker
+
     var marker = new mapboxgl.Marker({
-        draggable: true, //can place propertiese here
-        color: 'blue'
+        draggable: true, //can place properties here
+        color: 'red'
     })
         .setLngLat([-74.0445, 40.6892])
         .setDraggable(true) //or here using a .(property)
         .addTo(map);
 
+    // Coordinates Alert
+
     marker.on('dragend', function(){
-        alert(marker.getLngLat().toString())
+        $('h1').html(marker.getLngLat().toString())
     });
+
+	// Popup
 
     var popup = new mapboxgl.Popup()
         .setLngLat(marker.getLngLat())

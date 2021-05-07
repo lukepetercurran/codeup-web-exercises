@@ -37,9 +37,19 @@
 
   map.addControl(new mapboxgl.NavigationControl())
 
-  c
+  var marker = new mapboxgl.Marker({
+	  draggable: true, //can place propertiese here
+	  color: 'red'
+  })
+      .setLngLat([-98.4861, 29.4260])
+	  .setDraggable(true) //or here using a .(property)
+      .addTo(map);
 
-//  Instantation of Popup object
+  marker.on('dragend', function(){
+      alert(marker.getLngLat().toString())
+  })
+
+//  Instantiation of Popup object
 
   var popup = new mapboxgl.Popup()
       .setLngLat(marker.getLngLat())
@@ -50,8 +60,12 @@
   console.log(popup)
 
   // marker.setPopup(popup);  //disable this to leave popup at coordinates, but able to drag pin around
-  popup.addClassName('popup-font')
+  popup.addClassName('popup-font');
 
+  console.log(geocode("San Antonio", MAPBOX_ACCESS_TOKEN).then(function(results){
+
+  }))
+//look at Jays code, figure this out
 
 
 </script>

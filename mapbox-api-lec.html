@@ -28,6 +28,35 @@
   map.setCenter([-98.4916, 29.4252])
 
   console.log(map.getCenter());
+
+  map.addControl(new mapboxgl.NavigationControl())
+
+  var marker = new mapboxgl.Marker({
+	  draggable: true, //can place propertiese here
+	  color: 'red'
+  })
+      .setLngLat([-98.4861, 29.4260])
+	  .setDraggable(true) //or here using a .(property)
+      .addTo(map);
+
+  marker.on('dragend', function(){
+      alert(marker.getLngLat().toString())
+  })
+
+//  Instantation of Popup object
+
+  var popup = new mapboxgl.Popup()
+      .setLngLat(marker.getLngLat())
+      .setHTML("<h3>Hello World!</h3>")
+	  .setMaxWidth("100px")
+      .addTo(map);
+
+  console.log(popup)
+
+  marker.setPopup(popup);
+
+
+
 </script>
 </body>
 </html>

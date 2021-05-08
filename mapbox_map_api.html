@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mapbox Maps</title>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+  <script src="js/mapbox_map_api.js"></script>
+</head>
+<body>
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script src="js/keys.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<!--<script>-->
+<!--  mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;-->
+<!--  var map = new mapboxgl.Map({-->
+<!--    container: 'map', // container ID-->
+<!--    style: 'mapbox://styles/mapbox/light-v10', // style URL-->
+<!--    center: [126.9921, 37.5400], // starting position [lng, lat]-->
+<!--    zoom: 10 // starting zoom-->
+<!--  });-->
+
+<!--  // Marker-->
+
+<!--  var marker = new mapboxgl.Marker({-->
+<!--    draggable: true, //can place properties here-->
+<!--    color: 'red'-->
+<!--  })-->
+<!--          .setLngLat([-74.0445, 40.6892])-->
+<!--          .setDraggable(true) //or here using a .(property)-->
+<!--          .addTo(map);-->
+
+<!--  // Coordinates Alert-->
+
+<!--  marker.on('dragend', function(){-->
+<!--    $('h1').html(marker.getLngLat().toString())-->
+<!--  });-->
+
+<!--  // Popup-->
+
+<!--  var popup = new mapboxgl.Popup()-->
+<!--          .setLngLat(marker.getLngLat())-->
+<!--          .setHTML("<h3>The Statue of Liberty</h3>")-->
+<!--          .setMaxWidth("100px")-->
+<!--          .addTo(map);-->
+
+<!--  // marker.setPopup(popup);-->
+<!--</script>-->
+</body>
+</html>

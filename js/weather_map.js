@@ -22,8 +22,8 @@
     function renderHtml(data) {
         var html = "";
         for(var i = 0; i < 5; i += 1) {
-            var tempMax = data.daily[i].temp.max;
-            var tempMin = data.daily[i].temp.min;
+            var tempMax = Math.round(data.daily[i].temp.max);
+            var tempMin = Math.round(data.daily[i].temp.min);
             var description = data.daily[i].weather[0].description;
             var windSpeed = data.daily[i].wind_speed;
             var pressure = data.daily[i].pressure;
@@ -47,6 +47,7 @@
     }
 
     // ADDS MAP TO HTML
+
     mapboxgl.accessToken = WEATHER_MAP_TOKEN;
     var map = new mapboxgl.Map({
         container: 'map',
@@ -54,11 +55,14 @@
         center: [lng, lat], //starting position [lng, lat]
         zoom: 9 //starting zoom
     });
+
     // CONTROLS FOR MAP
+
     map.addControl(
         new mapboxgl.NavigationControl())
 
     // DRAGGABLE MARKER ON MAP
+
     var marker = new mapboxgl.Marker({
         draggable: true
     })
@@ -77,6 +81,7 @@
     marker.on('dragend', onDragEnd);
 
     // FUNCTION FOR SEARCH AND FLY TO ADDED
+
     function userSearch(){
         var newInput = input.val();
         geocode(newInput, WEATHER_MAP_TOKEN).then(function (result){
@@ -93,6 +98,7 @@
     }
 
     //this click event is using userSearch function and adding marker to map based on the user search
+
     $("button").click(function (e) {
         e.preventDefault();
         userSearch();

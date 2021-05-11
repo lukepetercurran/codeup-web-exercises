@@ -7,7 +7,7 @@
     // AJAX REQUEST FUNCTION
     weatherMap();
     function weatherMap() {
-        $.get("api.openweathermap.org/data/2.5/weather", {
+        $.get("http://api.openweathermap.org/data/2.5/onecall", {
             APPID: WEATHER_MAP_TOKEN,
             lat: lat,
             lon: lng,
@@ -97,7 +97,7 @@
         })
     }
 
-    //this click event is using userSearch function and adding marker to map based on the user search
+    // This click searches for user inputted location, moves marker and centers to input and displays weather forecast for that input.
 
     $("button").click(function (e) {
         e.preventDefault();

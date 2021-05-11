@@ -7,7 +7,7 @@
     // AJAX REQUEST FUNCTION
     weatherMap();
     function weatherMap() {
-        $.get("https://api.openweathermap.org/data/2.5/onecall", {
+        $.get("api.openweathermap.org/data/2.5/weather", {
             APPID: WEATHER_MAP_TOKEN,
             lat: lat,
             lon: lng,
@@ -35,7 +35,7 @@
             html += "<div class='card' style='width: 17rem;'>";
             html += "<div class='card-header text-center'>" + date2 + "</div>";
             html += "<ul class='list-group list-group-flush'>";
-            html += "<li class='list-group-item text-center'>" + tempMax + "°F" + " / " + tempMin + "°F" + "<br>" + "<img src='http://openweathermap.org/img/wn/" + iconCode + ".png'>" ;
+            html += "<li class='list-group-item text-center'>" + tempMax + "°F" + " / " + tempMin + "°F" + "<br>" + "<img src='http://openweathermap.org/img/wn/" + iconCode + ".png' alt='Weather Icon'>" ;
             html += "<li class='list-group-item'>" + "Description: " + "<strong>" + description + "</strong>";
             html += "<li class='list-group-item'>" + "Humidity: " + "<strong>" + humidity + "</strong>";
             html += "<li class='list-group-item'>" + "Wind: " + "<strong>" + windSpeed + "</strong>";
@@ -48,7 +48,7 @@
 
     // ADDS MAP TO HTML
 
-    mapboxgl.accessToken = WEATHER_MAP_TOKEN;
+    mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11', //stylesheet location
@@ -73,7 +73,7 @@
         var lngLat = marker.getLngLat();
         lng = lngLat.lng;
         lat = lngLat.lat;
-        reverseGeocode(lngLat, WEATHER_MAP_TOKEN).then(function (result){
+        reverseGeocode(lngLat, MAPBOX_ACCESS_TOKEN).then(function (result){
             input.val(result)
         })
         weatherMap();
@@ -84,7 +84,7 @@
 
     function userSearch(){
         var newInput = input.val();
-        geocode(newInput, WEATHER_MAP_TOKEN).then(function (result){
+        geocode(newInput, MAPBOX_ACCESS_TOKEN).then(function (result){
             lng = result[0];
             lat = result[1];
             marker.setLngLat([lng, lat]);

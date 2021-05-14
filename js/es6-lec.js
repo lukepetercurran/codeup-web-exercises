@@ -222,18 +222,18 @@
 
 // ES6 Better Way
 
-let name = 'Loopy Trail';
-let distance =4.6
-var difficulty = 'moderate';
-var isPaved = true
-
-let trail = {
-    name,
-    distance,
-    difficulty,
-    isPaved
-};
-console.log(trail);
+// let name = 'Loopy Trail';
+// let distance = 4.6
+// var difficulty = 'moderate';
+// var isPaved = true
+//
+// let trail = {
+//     name,
+//     distance,
+//     difficulty,
+//     isPaved
+// };
+// console.log(trail);
 
 // ===== Object Destructuring =====
 
@@ -246,28 +246,74 @@ console.log(trail);
 
 // ES6 Way
 
-let myObject = {
-    movieName: 'The Incredibles',
-    length: '1hr 43min'
-}
-
-let {movieName, length} = myObject;
-
-console.log(movieName, length);
+// let myObject = {
+//     movieName: 'The Incredibles',
+//     length: '1hr 43min'
+// }
+//
+// let {movieName, length} = myObject;
+//
+// console.log(movieName, length);
 
 //ES5 function for object destructuring
 
-function describeTrail(trailObj){
-    var name = trailObj.name;
-    var distance= trailObj.distance;
+// function describeTrail(trailObj){
+//     var name = trailObj.name;
+//     var distance= trailObj.distance;
+//
+//     return name + " " + "is " + distance + "mi long";
+// }
+//
+// console.log(describeTrail(trail));
+//
+// let describeTrail = trailObj => {
+//     let {name, distance} = trailObj;
+//     return name + " " + "is " + distance + "mi long";
+// };
+// console.log(describeTrail(trail))
 
-    return name + " " + "is " + distance + "mi long";
-}
+// let movies = [
+//     {
+//         title: 'Lord of the Rings: The Fellowship of the Ring',
+//         description: 'Nine guys go on a hike together',
+//     },
+//     {
+//         title: 'The Bee Movie',
+//         description: 'A movie about Bees'
+//     },
+//     {
+//         title: 'Harry Potter and the Chamber of Secrets',
+//         description: 'A young boy goes to wizarding school. Theres a snake'
+//     }]
 
-console.log(describeTrail(trail));
 
-let describeTrail = trailObj => {
-    let {name, distance} = trailObj;
-    return name + " " + "is " + distance + "mi long";
-};
-console.log(describeTrail(trail))
+// function getMovieInfo(listOfMovies){
+//     for (let movie of listOfMovies){
+//         let {title, description} = movie;
+//         console.log(`The movie you selected is ${title}. A short description would be ${description}`);
+//     }
+// }
+
+// getMovieInfo(movies);
+
+// ===== Array Destructuring =====
+
+
+// Old Way
+
+// var lotr = movies[0];
+// var beeMovie = movies[1];
+// var hp = movies [2];
+//
+// console.log(lotr, beeMovie, hp)
+//
+// // New ES6 Way
+//
+// let [x, y, z] = movies;
+//
+// console.log(x,y,z)
+
+// let [firstMovie, ... restOfMovies] = movies;
+//
+// console.log(firstMovie)
+// console.log(restOfMovies)

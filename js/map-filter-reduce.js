@@ -57,3 +57,8 @@ let es5Emails = users.map(function(user){
 // es6
 
 let es6Emails = users.map(user => user.email);
+
+// #4
+let totalEXP = users.reduce(function(total,yearsOfExperience, users){
+    return user
+})

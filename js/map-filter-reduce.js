@@ -114,7 +114,7 @@ let names = users.reduce(function(accumulator, user){
 }, []);
 
 let namesNicelyJoined = users.reduce(function(accumulator, user,index, usersArray){
-    if (index === uderrsArray.length - 1){
+    if (index === usersArray.length - 1){
         accumulator.push(user.name);
         let niceJoin = accumulator.join(', ');
     } else {

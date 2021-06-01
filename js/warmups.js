@@ -22,6 +22,23 @@
 
 // const returnSeven = () => 7;
 
+// Warmup May 26, Write a function in Javascript that takes in a number and returns the number passed multiplied by the number 5. If we pass anything other than a number into the function, the function should return the number 0.
+
+function fiveByFive(x){
+    if (x <= 0 || x > 0) {
+        return (x * 5)
+    } else {
+        return (0)
+    }
+}
+
+const multiplyByFive = num => typeof num === "number" ? num * 5 :0;
+
+console.log(multiplyByFive(5));
+console.log(multiplyByFive(-3.5));
+console.log(multiplyByFive(0));
+console.log(multiplyByFive("Sixteen"));
+console.log(multiplyByFive(true));
 
 
 

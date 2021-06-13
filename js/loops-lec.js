@@ -105,6 +105,7 @@ for (count = 0; count <= 100; count = count + 1){
 for (var i = 0; i <= 100; i++){
     console.log(i);
 }
+
 // These 3 loops do the same thing. Start at 0, and count to 100.
 // i stands for "iteration"
 // slap a var in front of i to make it work in strict.

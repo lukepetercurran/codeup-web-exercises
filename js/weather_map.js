@@ -96,6 +96,7 @@
             weatherMap();
         })
     }
+    // meh
 
     // This click searches for user inputted location, moves marker and centers to input and displays weather forecast for that input.
 

@@ -233,6 +233,7 @@ var view = {
         if (hitPointsLeft <= 0) {
             console.log(defender + " is dead!");
         }
+        // to git or not to git
 
     }
 }

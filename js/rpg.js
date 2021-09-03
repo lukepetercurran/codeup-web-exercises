@@ -230,6 +230,7 @@ var view = {
         } else {
             console.log(attacker + " missed!");
         }
+
         if (hitPointsLeft <= 0) {
             console.log(defender + " is dead!");
         }

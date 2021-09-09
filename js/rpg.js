@@ -290,3 +290,4 @@ function simulateCombat(combatant1, combatant2) {
 }
 
 simulateCombat(model.fighter, model.monster);
+//check check

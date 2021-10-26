@@ -59,6 +59,21 @@ const fizzbuzz = numTil => {
 }
 fizzbuzz(100)
 
+const fizzbuzzone = numTil => {
+    for (let x = 1; x<= numTil; x++){
+        if (x % 2 === 0 && x % 5 === 0){
+            console.log("Fizzbuzz");
+        } else if (x % 2 === 0){
+            console.log("Fizz");
+        } else if (x % 5 === 0){
+            console.log("Buzz");
+        } else {
+            console.log(x)
+        }
+    }
+}
+fizzbuzzone(100)
+
 
 
 

@@ -109,3 +109,7 @@ for(var i = 0; i < 8; i++) {
     var string = string + " " + word;
     console.log("Your sentence is: " + string);
 }
+
+for (var i = 0; i < 10; i++){
+    var
+}

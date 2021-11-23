@@ -110,11 +110,3 @@ for(var i = 0; i < 8; i++) {
     console.log("Your sentence is: " + string);
 }
 
-for (var i = 0; i < 10; i++){
-    var down = prompt("The internet is down");
-    if(down === "curses"){
-        console.log("This program shouldnt be working, and yet");
-    }
-    var string = string + " " + down;
-    console.log("Is the internet down?")
-}

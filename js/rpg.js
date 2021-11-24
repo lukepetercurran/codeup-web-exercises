@@ -31,6 +31,18 @@
 //     maxDamage: 12
 // }
 
+// var kobold = {
+//     type: "kobold runt",
+//     strength: 8,
+//     strengthBonus: -1,
+//     hitPoints: 4,
+//     armorClass: 16,
+//     weapon: "Sling",
+//     attackBonus: 2,
+//     minDamage: 1,
+//     maxDamage: 4
+// }
+
 // now let's make it so the fighter can attack the monster
 
 // fighter.attack  =  function(enemy) {

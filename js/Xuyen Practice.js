@@ -31,14 +31,27 @@
 
 /*Using Nested loops, print the values inside the nested arrays*/
 
-    let nestedArrays = [
-        ["a", "b", "c"],
-        ["d", "e", "f"],
-        ["g", "h", "i"]
-    ];
-    for (let i = 0; i <= nestedArrays.length; i++) {
-        for (let j = 0; j <= nestedArrays[i].length; j++) {
-                console.log(nestedArrays[i][j])
-            }
-        }
+    // let nestedArrays = [
+    //     ["a", "b", "c"],
+    //     ["d", "e", "f"],
+    //     ["g", "h", "i"]
+    // ];
+    // for (let i = 0; i <= nestedArrays.length; i++) {
+    //     for (let j = 0; j <= nestedArrays[i].length; j++) {
+    //             console.log(nestedArrays[i][j])
+    //         }
+    //     }
+
+// Fizzbuzz es5
+for (i = 1; i < 100; i++ ){
+    if (i % 3 === 0 && i % 5 === 0){
+        console.log("Fizzbuzz");
+    } else if ( i % 3 === 0){
+        console.log("Fizz");
+    } else if ( i % 5 === 0){
+        console.log("Buzz");
+    } else {
+        console.log(i)
+    }
+}
 

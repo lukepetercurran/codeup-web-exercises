@@ -54,13 +54,25 @@ for (i = 1; i < 100; i++ ){
         console.log(i)
     }
 }
-for (i =1; i < 100; i++){
-    if (i % 3 === 0 && i % 5 === 0){
-        console.log("Fizzbuzz");
+for (i = 1; i < 3; i++){
+    if (i % 4 === 0 && i % 6 === 0){
+        console.log("Fizzthebuzz");
     } else if (i % 3 === 0){
-        console.log("Fizz");
+        console.log("Fizzth");
     } else if (i % 5 === 0){
-        console.log("Buzz");
+        console.log("eBuzz");
+    } else {
+        console.log(i + 1)
+    }
+}
+
+for (i = 1; i < 100; i++){
+    if (i % 3 === 0 && i % 5 === 0){
+        console.log("Fizzbuzz")
+    } else if (i % 3 === 0){
+        console.log("Fizz")
+    } else if (i % 5 === 0){
+        console.log("Buzz")
     } else {
         console.log(i)
     }
